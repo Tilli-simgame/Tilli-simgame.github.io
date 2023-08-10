@@ -1,2 +1,1 @@
-# tilli-simgame.github.io
-A steampunk themed sim-game stable located in a central Europe
+Welcome to the Tranguille Trails Stables! This is a sim-game stable.
