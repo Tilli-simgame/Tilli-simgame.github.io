@@ -7,7 +7,13 @@
 
     {%- include header.html -%}
 
-    <main class="page-content" id="{{page.title}}" aria-label="Content">
+    {% if page.title == 'mainpage' %}
+    <main class="page-content" class="{{page.title}}" id="map" aria-label="Content"> 
+    {% else %}
+    <main class="page-content" class="{{page.title}}" aria-label="Content"> 
+    {% endif %}
+    
+    
       <div class="wrapper">
         {{ content }}
       </div>
