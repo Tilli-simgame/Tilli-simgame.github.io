@@ -1,0 +1,16 @@
+<script>
+  var bounds = [
+    [0, 0],
+    [1024, 2048],
+  ];
+
+  var map = L.map("map", {
+    crs: L.CRS.Simple,
+    maxBounds: bounds,
+    maxBoundsViscosity: 1,
+  });
+
+  var image = L.imageOverlay("/assets/map/home-bg.png", bounds).addTo(map);
+
+  map.fitBounds(bounds);
+</script>
