@@ -12,5 +12,13 @@
 
   var image = L.imageOverlay("/assets/map/home-bg.png", bounds).addTo(map);
 
+  var polygon = L.polygon([
+    [300, 390],
+    [400, 470],
+    [500, 750],
+  ]).addTo(map);
+
+  polygon.bindPopup("Testing...");
+
   map.fitBounds(bounds);
 </script>
