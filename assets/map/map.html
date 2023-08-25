@@ -14,10 +14,21 @@
     maxBoundsViscosity: 1,
   });
 
-  if(pageName == "/stables/") {
+  if (pageName == "/stables/") {
     console.log("page: stables");
-    var image = L.imageOverlay("/assets/map/stable--lounge-room.png", bounds).addTo(map);
+    var image = L.imageOverlay(
+      "/assets/map/stable02--lounge-room.png",
+      bounds
+    ).addTo(map);
 
+    var chalckboardCoordinates = L.rectangle([
+      [805, 919],
+      [537, 1312],
+    ]).addTo(map);
+
+    chalckboardCoordinates.bindPopup(
+      "<a href='/stables/our-horses'>Look closer to see our horses</a>"
+    );
   } else {
     console.log("page: home");
     var image = L.imageOverlay("/assets/map/home-bg.png", bounds).addTo(map);
@@ -71,6 +82,6 @@
     stableCoordinates.bindPopup("<a href='/stables'>Stables</a>");
     officeCoordinates.bindPopup("Home");
   }
-  
+
   map.fitBounds(bounds);
 </script>

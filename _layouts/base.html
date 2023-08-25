@@ -7,10 +7,10 @@
 
     {%- include header.html -%}
 
-    {% if page.title == 'mainpage' or 'stables' %}
+    {% if page.title == 'mainpage' or page.title == 'stables' %}
     <main class="page-content" class="{{page.title}}" id="map" aria-label="Content"> 
     {% else %}
-    <main class="page-content" class="{{page.title}}" aria-label="Content"> 
+    <main class="page-content {{page.slug}}--background" aria-label="Content"> 
     {% endif %}
     
     

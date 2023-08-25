@@ -4,5 +4,17 @@
 @import "{{ site.theme }}";
 
 .site-footer {
-    padding: 5px 0;
+  padding: 5px 0;
+}
+
+.our-horses--background {
+  background-image: url("/assets/map/stable--indoors.png");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
