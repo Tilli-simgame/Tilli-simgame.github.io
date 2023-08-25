@@ -1,4 +1,8 @@
 <script>
+  var pageName = window.location.pathname;
+
+  console.log(pageName);
+
   var bounds = [
     [0, 0],
     [1024, 2048],
@@ -10,56 +14,63 @@
     maxBoundsViscosity: 1,
   });
 
-  var image = L.imageOverlay("/assets/map/home-bg.png", bounds).addTo(map);
+  if(pageName == "/stables/") {
+    console.log("page: stables");
+    var image = L.imageOverlay("/assets/map/stable--lounge-room.png", bounds).addTo(map);
 
-  var stableCoordinates = L.polygon([
-    [374, 902],
-    [409, 928],
-    [422, 985],
-    [440, 985],
-    [440, 1003],
-    [432, 1016],
-    [452, 1092],
-    [434, 1127],
-    [371, 1165],
-    [346, 1165],
-    [300, 1244],
-    [288, 1224],
-    [232, 1231],
-    [186, 1105],
-    [174, 1014],
-    [199, 915],
-    [246, 844],
-    [291, 835],
-    [324, 861],
-    [324, 897],
-  ]).addTo(map);
+  } else {
+    console.log("page: home");
+    var image = L.imageOverlay("/assets/map/home-bg.png", bounds).addTo(map);
 
-  var officeCoordinates = L.polygon([
-    [459, 519],
-    [537, 515],
-    [690, 506],
-    [721, 448],
-    [752, 482],
-    [850, 294],
-    [741, 92],
-    [690, 117],
-    [607, 110],
-    [595, 74],
-    [569, 74],
-    [542, 99],
-    [510, 104],
-    [493, 65],
-    [358, 258],
-    [327, 280],
-    [349, 330],
-    [392, 352],
-    [434, 417],
-    [430, 454],
-  ]).addTo(map);
+    var stableCoordinates = L.polygon([
+      [374, 902],
+      [409, 928],
+      [422, 985],
+      [440, 985],
+      [440, 1003],
+      [432, 1016],
+      [452, 1092],
+      [434, 1127],
+      [371, 1165],
+      [346, 1165],
+      [300, 1244],
+      [288, 1224],
+      [232, 1231],
+      [186, 1105],
+      [174, 1014],
+      [199, 915],
+      [246, 844],
+      [291, 835],
+      [324, 861],
+      [324, 897],
+    ]).addTo(map);
 
-  stableCoordinates.bindPopup("<a href='/stables'>Stables</a>");
-  officeCoordinates.bindPopup("Home");
+    var officeCoordinates = L.polygon([
+      [459, 519],
+      [537, 515],
+      [690, 506],
+      [721, 448],
+      [752, 482],
+      [850, 294],
+      [741, 92],
+      [690, 117],
+      [607, 110],
+      [595, 74],
+      [569, 74],
+      [542, 99],
+      [510, 104],
+      [493, 65],
+      [358, 258],
+      [327, 280],
+      [349, 330],
+      [392, 352],
+      [434, 417],
+      [430, 454],
+    ]).addTo(map);
 
+    stableCoordinates.bindPopup("<a href='/stables'>Stables</a>");
+    officeCoordinates.bindPopup("Home");
+  }
+  
   map.fitBounds(bounds);
 </script>

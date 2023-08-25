@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Stables
+layout: mainpage
+title: stables
 permalink: /stables/
 ---
 
