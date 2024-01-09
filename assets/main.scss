@@ -3,6 +3,11 @@
 
 @import "{{ site.theme }}";
 
+.wrapper {
+  max-width: -webkit-calc(1024px - (30px * 2));
+  max-width: calc(1024px - (30px * 2));
+}
+
 .site-footer {
   padding: 5px 0;
 }
@@ -18,3 +23,25 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+
+
+.horse-profile-page-wrapper {
+  border: 50px solid transparent;
+  padding: 15px;
+  border-image: url("/assets/map/chalckboard-horsepage-css-border.png") 30 round;
+  background-color: #0F2032;
+} 
+
+
+/*
+.horse-profile-chalkboard_bg {
+  background-image: url("/assets/map/horse-profile--background.png");
+
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}*/
