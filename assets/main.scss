@@ -34,6 +34,26 @@
   background-color: #0F2032;
 } 
 
+.horse-profile-page-wrapper h1 {
+  color: white;
+}
+
+.note{
+  border: 50px solid transparent;
+  padding: 15px;
+  border-image: url("/assets/map/chalkboard-notes.png") 30 round;
+  border-image-slice: 72;
+  background-color: #FBF3E7;
+  float: left;
+}
+
+.horse-photo-frame{
+  border: 10px solid transparent;
+  border-image: url("/assets/map/horse-profile--image-frame.png") 30 round;
+  border-image-slice: 14;
+  background-color: #FBF3E7;
+}
+
 
 /*
 .horse-profile-chalkboard_bg {

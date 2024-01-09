@@ -5,13 +5,41 @@ layout: base
   <article class="post">
 
     <header class="post-header">
-      <h1 class="post-title">{{ page.title | escape }}</h1>
+      <h1 class="post-title">{{ page.horse_name | escape }}</h1>
     </header>
 
     <div class="post-content">
-      <div class="horse-profile-chalkboard_bg">
-        {{ content }}
-      </div>
+      <div class="note" style="width: 20%;">
+        <table>
+          <tr>
+              <th>Name:</th>
+              <td>Horse's Name</td>
+          </tr>
+          <tr>
+              <th>Breed:</th>
+              <td>Horses' Breed</td>
+          </tr>
+          <tr>
+              <th>DOB:</th>
+              <td>00.00.2024</td>
+          </tr>
+          <tr>
+              <th>Height:</th>
+              <td>000cm</td>
+          </tr>
+          <tr>
+              <th>Color:</th>
+              <td>Bay</td>
+          </tr>
+          <tr>
+              <th>Markings:</th>
+              <td>none</td>
+          </tr>
+      </table>
+      </div>  
+        <img src="/assets/map/horse-head.png" class="horse-photo-frame" style="width: 60%;" />
+
+      {{ content }}
     </div>
   </article>
 </div>
